@@ -1,0 +1,33 @@
+{% extends 'partials/index.html' %}
+{% block title %}Profile Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!-- Modal -->
+<div class="container mx-auto px-4">
+    <div class="flex justify-center mt-5 pt-3">
+        <div class="w-full md:w-1/2">
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Update Profile</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="space-y-4"> 
+                        {{ u_form|crispy }}  
+                        <br>
+                        <div class="flex-shrink-0">
+                            <img class="w-24 h-24 rounded-full object-cover border" src="{{ user.profilemodel.image.url }}" alt="Upload Profile Pic">
+                        </div>
+                        <br>
+                        {{ p_form|crispy }}  
+                    </div>
+                    <br>
+                    <div class="flex justify-left mt-6">  
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

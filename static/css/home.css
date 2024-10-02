@@ -1,0 +1,11 @@
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+.text-gray-600 {
+    color: #4B5563; /* Dark gray for better contrast */
+}
+

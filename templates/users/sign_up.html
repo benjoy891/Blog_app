@@ -1,0 +1,26 @@
+{% extends 'partials/index.html' %}
+{% block title %}Sign Up{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-md">
+        <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+            <h4 class="text-3xl font-bold text-center text-gray-800 mb-4">Sign Up</h4>
+            <hr class="my-4 border-gray-300">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input 
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-300 mt-4 transition duration-200" 
+                    type="submit" 
+                    value="Sign Up">
+            </form>
+            <p class="mt-6 text-center text-gray-600">
+                Already have an account? 
+                <a href="{% url 'users-login' %}" class="text-blue-500 hover:underline">Login here</a>.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

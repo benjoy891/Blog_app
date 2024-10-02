@@ -1,0 +1,32 @@
+{% load tailwind_tags %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="#">
+    {% block css %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+    {% tailwind_css %}
+
+</head>
+
+<body class="bg-gray-100">
+
+    {% include 'partials/nav.html' %}
+
+    <div class="container mx-auto py-8">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    {% block menu %}
+    {% endblock %}
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
