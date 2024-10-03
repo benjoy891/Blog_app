@@ -158,13 +158,15 @@ MEDIA_URL = '/media/'
 
 
 
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
-]
+STATIC_URL = '/staticfiles/'
 
+# This is where your static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Additional directories to look for static files (e.g., for development)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Local development folder
+]
 
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
