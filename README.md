@@ -172,10 +172,15 @@ This project provides a REST API using Django Rest Framework (DRF). Below are th
 
 ---
 
+## Delployment 
+
+url - https://blogproject-omega.vercel.app/
+# Note - The tailwind is not being rendered due to some issues 
+
+
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
----
 
-This README file provides clear instructions on how to install, run, and work with your **Blog_app** project. Let me know if you need any more adjustments!
+
