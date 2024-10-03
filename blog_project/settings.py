@@ -26,7 +26,13 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',         # For local development
+    '127.0.0.1',        # For local development
+    '[::1]',            # For local development (IPv6)
+    '.vercel.app',      # For Vercel deployment (allows any subdomain under vercel.app)
+    'your-docker-ip',   # Replace with your Docker container's IP if needed, e.g., '172.17.0.2'
+]
 
 
 # Application definition
